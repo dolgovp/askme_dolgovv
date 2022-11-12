@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>Log In</h1>
+<form>
+  <div class="row mb-3">
+    <label for="inputLogin" class="col-sm-2 col-form-label">Login</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="inputLogin">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-6">
+      <input type="password" class="form-control" id="inputPassword3">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputText" class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-6">
+        <button type="submit" class="btn btn-primary">Log in!</button>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputText" class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-6">
+        <a href="#">create new account</a>
+    </div>
+  </div>
+
+</form>
+{% endblock %}

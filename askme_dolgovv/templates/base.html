@@ -42,7 +42,29 @@
 
 <!-- Begin page content -->
     <main class="flex-shrink-0">
-        {% block content %} {% endblock %}
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    {% block content %} {% endblock %}
+                </div>
+                <div class="col-4">
+                    <div class="sidebar">
+                        <div class="tags">
+                            <h2> Popular Tags</h2>
+                            <div class="tag">C++</div>
+                            <div class="tag">Ruby</div>
+                            <div class="tag">Java</div>
+                        </div>
+                        <div class="members">
+                            <h2> Best Members</h2>
+                            <div class="member"><a href="#">Pavel</a></div>
+                            <div class="member"><a href="#">Jack</a></div>
+                            <div class="member"><a href="#">Ali</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer mt-auto py-3 bg-light">

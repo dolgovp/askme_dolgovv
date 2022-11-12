@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="question-page">
+    <div class="row">
+      <div class="col-2">
+          <div class="row-3" >
+            <div class="avatar">
+                <img src="{% static '/img/avatar-2.jpeg' %}" alt="">
+            </div>
+          </div>
+          <div class="like-group">
+              <div class="row-1">
+                   <div class="btn-group" role="group" >
+                      <button type="button" class="btn btn-success"> Like </button>
+                      <button type="button" class="btn btn-danger">Dis</button>
+                    </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-10">
+        <h2 class=question-title">Question 1</h2>
+        <div class="question-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam corporis deserunt eos labore laborum nobis perferendis reprehenderit, soluta totam vero.
+        </div>
+        <div class="question-info">
+                Tags:
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="divider"><hr></div>
+    <div class="question">
+    <div class="row">
+      <div class="col-2">
+          <div class="row-3" >
+            <div class="avatar">
+                <img src="{% static '/img/avatar-2.jpeg' %}" alt="">
+            </div>
+          </div>
+          <div class="like-group">
+              <div class="row-1">
+                   <div class="btn-group" role="group" >
+                      <button type="button" class="btn btn-success"> Like </button>
+                      <button type="button" class="btn btn-danger">Dis</button>
+                    </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-10">
+        <h2 class=question-title">Question 1</h2>
+        <div class="question-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam corporis deserunt eos labore laborum nobis perferendis reprehenderit, soluta totam vero.
+        </div>
+        <div class="question-info">
+            <div class="row">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Correct
+                  </label>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="question">
+    <div class="row">
+      <div class="col-2">
+          <div class="row-3" >
+            <div class="avatar">
+                <img src="{% static '/img/avatar-2.jpeg' %}" alt="">
+            </div>
+          </div>
+          <div class="like-group">
+              <div class="row-1">
+                   <div class="btn-group" role="group" >
+                      <button type="button" class="btn btn-success"> Like </button>
+                      <button type="button" class="btn btn-danger">Dis</button>
+                    </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-10">
+        <div class="question-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam corporis deserunt eos labore laborum nobis perferendis reprehenderit, soluta totam vero.
+        </div>
+        <div class="question-info">
+            <div class="row">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Correct
+                  </label>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="divider"><hr></div>
+    <div class="answer-form">
+        <textarea placeholder="Enter your answer here.." class="form-control answer-textarea" ></textarea>
+        <button type="button" class="btn btn-primary btn-answer">Answer</button>
+    </div>
+{% endblock %}
