@@ -20,18 +20,11 @@
             <div class="col-md-3 ms-auto">
                <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                  <a href="{% url 'ask' %}" class="btn btn-outline-success" >ASK!</a>
                 </form>
             </div>
             <div class="col-md-2 ms-auto">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                  <li class="nav-item">
-                    <a class="nav-link active"  href="{% url 'login' %}">log in</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active"  href="#">register</a>
-                  </li>
-                </ul>
+                {% include 'inc/auth_header.html' %}
             </div>
       </nav>
     </header>
