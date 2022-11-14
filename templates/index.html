@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<h1>New question</h1>
+    <div class="row">
+        <h1 class="col-6">New questions </h1>
+        <h2 class = col-6><a  href="{% url "hot" %}" >Hot!</a></h2>
+    </div>
     {% for question in questions %}
         {% include 'inc/question_item.html' %}
     {% endfor %}

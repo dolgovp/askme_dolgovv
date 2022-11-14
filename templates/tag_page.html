@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>Tag: {{ tag }}</h1>
+    {% for question in questions_with_tag %}
+        {% include 'inc/question_item.html' %}
+    {% endfor %}
+    {% include 'inc/paginator.html' %}
+{% endblock %}

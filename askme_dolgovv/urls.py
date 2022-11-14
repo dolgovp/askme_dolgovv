@@ -23,9 +23,11 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', views.index, name="index"),
     path('question/<int:question_id>', views.question, name='question_page'),
+    path('tag/<str:tag>', views.tags, name='tag_page'),
     path('ask', views.ask, name='ask'),
     path('login', views.login, name='login'),
     path('signup', views.signup, name='signup'),
-    path('settings', views.settings, name='settings')
+    path('settings', views.settings, name='settings'),
+    path('hot', views.hot, name='hot')
 
 ]

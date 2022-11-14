@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>Hot</h1>
+    {% for question in sorted_questions %}
+        {% include 'inc/question_item.html' %}
+    {% endfor %}
+    {% include 'inc/paginator.html' %}
+{% endblock %}
