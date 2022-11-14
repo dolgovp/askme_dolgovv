@@ -5,7 +5,7 @@
         <h1 class="col-6">New questions </h1>
         <h2 class = col-6><a  href="{% url "hot" %}" >Hot!</a></h2>
     </div>
-    {% for question in questions %}
+    {% for question in page %}
         {% include 'inc/question_item.html' %}
     {% endfor %}
     {% include 'inc/paginator.html' %}

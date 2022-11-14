@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <h1>Tag: {{ tag }}</h1>
-    {% for question in questions_with_tag %}
+    {% for question in page%}
         {% include 'inc/question_item.html' %}
     {% endfor %}
     {% include 'inc/paginator.html' %}
