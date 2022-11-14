@@ -22,9 +22,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.index),
-    path('question/123', views.question),
-    path('ask', views.ask),
-    path('login', views.login),
+    path('question/<int:question_id>', views.question, name='question_page'),
+    path('ask', views.ask, name='ask'),
+    path('login', views.login, name='login'),
     path('signup', views.signup),
     path('settings', views.settings)
 

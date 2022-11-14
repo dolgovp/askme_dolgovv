@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<h1>Settings: Dr.Pepper</h1>
 <form>
+    <div class="row mb-3">
+        <h1 class="col-sm-5">Settings: Dr.Pepper</h1>
+        <div class="col-sm-5">
+          <div class="avatar-settings">
+            <img src="{% static '/img/avatar-2.jpeg' %}" alt="">
+          </div>
+        </div>
+    </div>
   <div class="row mb-3">
     <label for="inputLogin" class="col-sm-4 col-form-label">Login</label>
     <div class="col-sm-5">
@@ -24,9 +31,6 @@
   <div class="row mb-3">
       <label for="formFile" class="form-label col-sm-4">Upload avatar</label>
       <div class="col-sm-5">
-        <div class="avatar-settings">
-          <img src="{% static '/img/avatar-2.jpeg' %}" alt="">
-        </div>
         <input class="form-control" type="file" id="formFile">
       </div>
   </div>

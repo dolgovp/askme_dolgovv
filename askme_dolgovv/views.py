@@ -1,13 +1,14 @@
 from django.shortcuts import render
-
+from . import models
 from askme_dolgovv.settings import STATIC_ROOT, BASE_DIR
 
 
 def index(request):
-    return render(request, 'index.html')
+    context = {'questions': models.QUESTIONS}
+    return render(request, 'index.html', context=context)
 
 
-def question(request):
+def question(request, question_id: int):
     return render(request, 'question.html')
 
 
@@ -21,6 +22,7 @@ def login(request):
 
 def signup(request):
     return render(request, 'signup.html')
+
 
 def settings(request):
     return render(request, 'settings.html')
