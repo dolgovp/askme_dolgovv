@@ -1,3 +1,4 @@
+from django.utils.timezone import now
 from django.db import models
 
 QUESTIONS = [
@@ -12,14 +13,14 @@ QUESTIONS = [
 
 
 class User(models.Model):
-    email = models.EmailField
+    email = models.EmailField(default='test@gmail.ru')
     nickname = models.CharField(max_length=30)
-    password = models.CharField(max_length=30)
+    password = models.CharField(max_length=30, default='12345678g')
     avatar = models.ImageField(default='static/img/avatar.jpeg', blank=True)
-    registration_data = models.DateTimeField
+    registration_data = models.DateTimeField(default=now)
 
     def __str__(self):
-        return f'{self.nickname}'
+        return f'{self.nickname +str(self.id)}'
 
 
 class TagManager(models.Manager):
@@ -41,11 +42,11 @@ class QuestionManager(models.Manager):
 
 class Question(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    title = models.CharField(max_length=30)
-    creation_date = models.DateTimeField
+    title = models.CharField(max_length=30, default="title")
+    creation_date = models.DateTimeField(default=now)
     q_likes_counter = models.IntegerField(default=0)
     tags = models.ManyToManyField(Tag)
-    object = QuestionManager()
+    objects = QuestionManager()
 
 
 class QuestionLike(models.Model):
@@ -59,7 +60,7 @@ class Answer(models.Model):
     text = models.TextField
     a_likes_counter = models.IntegerField(default=0)
     tags = models.ManyToManyField(Tag)
-    writing_date = models.DateTimeField
+    writing_date = models.DateTimeField(default=now)
 
 
 class AnswerLike(models.Model):
