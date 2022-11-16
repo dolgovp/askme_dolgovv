@@ -21,6 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', views.index, name="index"),
     path('question/<int:question_id>', views.question, name='question_page'),
     path('tag/<str:tag>', views.tags, name='tag_page'),
